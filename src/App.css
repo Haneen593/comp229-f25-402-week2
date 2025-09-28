@@ -5,11 +5,24 @@
   text-align: center;
 }
 
+@media screen and (max-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    height: 4em;
+  }
+  
 }
 
 header {
@@ -20,6 +33,13 @@ header {
   margin-left: 40px;
 }
 
+@media screen {
+  header {
+    flex-direction: flex;
+    align-items: center;
+  }
+}
+
 h2 {
   line-height: 1.1;
   margin: 0;     
@@ -27,6 +47,14 @@ h2 {
   font-size: 50px;
   margin-left: 20px;
   margin-right: 10%;
+}
+
+@media (max-width: 600px) {
+  h2 {
+    font-size: 32px;
+    margin: 0 20px;
+    text-align: center;
+  }
 }
 
 .navigationBar {
@@ -39,6 +67,14 @@ h2 {
   font-weight: bold;
 }
 
+@media screen {
+  .navigationBar {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+}
+
 a {
   font-weight: 500;
   color: #4b83d8;
@@ -47,19 +83,4 @@ a {
 
 a:hover {
   color: #3466af;
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
 }
